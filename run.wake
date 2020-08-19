@@ -1,0 +1,1 @@
+global def run args = makeTestSocketDUT "default" Nil | makeRTL
