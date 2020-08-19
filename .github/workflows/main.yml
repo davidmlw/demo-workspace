@@ -33,4 +33,4 @@ jobs:
     - name: Build workspace
       uses: davidmlw/jdk-wake@master
       with:
-        arguments: -x 'makeTestSocketDUT "default" Nil | makeRTL'
+        arguments: -x "makeTestSocketDUT \"default\" Nil | makeRTL"
