@@ -3,5 +3,15 @@
         "commit": "86f0ebc6c26b8059af50da455fefb5c6527277ff",
         "name": "soc-testsocket-sifive",
         "source": "git@github.com:sifive/soc-testsocket-sifive.git"
+    },
+    {
+        "commit": "8d418f9cb444f6d28adf4efc303c0589aff4093c",
+        "name": "api-scala-sifive",
+        "source": "git@github.com:davidmlw/api-scala-sifive.git"
+    },
+    {
+        "commit": "44d895b9d9fdb6e08beab7e57eee83e95e0c71de",
+        "name": "api-scala-sifive",
+        "source": "git@github.com:davidmlw/rocket-chip.git"
     }
 ]

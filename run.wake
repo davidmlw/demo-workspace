@@ -1,1 +1,10 @@
 global def run args = makeTestSocketDUT "default" Nil | makeRTL
+
+global topic preBuildMavens : String
+publish environment =
+  def mavens =
+    subscribe preBuildMavens
+    | map (\x "file://{workspace}/{x}")
+    | catWith "|"
+    | tap println
+  "COURSIER_REPOSITORIES=central|sonatype:releases|jitpack|{mavens}", Nil

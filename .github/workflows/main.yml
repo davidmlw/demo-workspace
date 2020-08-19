@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - jar
   pull_request:
   watch:
     types: [ started ]
