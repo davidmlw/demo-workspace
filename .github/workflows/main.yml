@@ -27,7 +27,7 @@ jobs:
         command: init
         arguments: |
           workspace
-          -a git@github.com:david/demo-workspace.git
+          -a git@github.com:davidmlw/demo-workspace.git
         force_github_https: true
 
     - name: Build workspace
