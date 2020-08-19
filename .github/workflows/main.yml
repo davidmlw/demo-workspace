@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+  watch:
+    types: [ started ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    if: github.actor == github.event.repository.owner.login
+
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Prepare workspace
+      uses: sifive/wit/actions/wit@master
+      with:
+        command: init
+        arguments: |
+          workspace
+          -a git@github.com:david/demo-workspace.git
+        force_github_https: true
+
+    - name: Build workspace
+      uses: davidmlw/jdk-wake@master
+      with:
+        arguments: -x 'makeTestSocketDUT "default" Nil | makeRTL'
