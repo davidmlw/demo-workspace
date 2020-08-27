@@ -11,7 +11,7 @@
     },
     {
         "commit": "44d895b9d9fdb6e08beab7e57eee83e95e0c71de",
-        "name": "api-scala-sifive",
+        "name": "rocket-chip",
         "source": "git@github.com:davidmlw/rocket-chip.git"
     }
 ]
